@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Milkuhh 💙</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("images/background.jpeg") center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Dark cinematic overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+}
+
+/* Letter Box */
+.letter-box {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 750px;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    padding: 50px;
+    border-radius: 30px;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(15px);
+
+    border: 2px solid rgba(0,191,255,0.6);
+
+    box-shadow:
+        0 0 40px rgba(0,191,255,0.6),
+        inset 0 0 50px rgba(0,119,255,0.4);
+
+    color: white;
+    line-height: 1.8;
+    animation: fadeZoom 1.5s ease forwards;
+}
+
+/* Title */
+.letter-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00c6ff;
+    font-size: 32px;
+    text-shadow: 0 0 20px rgba(0,191,255,0.9);
+}
+
+/* Scroll styling */
+.letter-box::-webkit-scrollbar {
+    width: 6px;
+}
+.letter-box::-webkit-scrollbar-thumb {
+    background: #00c6ff;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+<div class="letter-box">
+    <h1>Happy Birthday, Vidhya ❤️</h1>
+
+    <p>But to me, you’ll always be my Milkuhh.</p>
+
+    <p>
+    3 years ago, if someone told me that one girl would become my whole world…
+    I wouldn’t have believed it.
+    </p>
+
+    <p>
+    But here we are. <strong>3 years. 1095 days.</strong>
+    </p>
+
+    <p>
+    And still, every time I see your name on my phone,
+    I smile like an idiot.
+    </p>
+
+    <p>
+    We’ve had our fights. We’ve had misunderstandings.
+    But we never gave up on each other.
+    </p>
+
+    <p>
+    Namma relationship perfect illa…
+    but it’s real. And that’s what makes it beautiful.
+    </p>
+
+    <p>
+    Milkuhh… You are not just my girlfriend.
+    </p>
+
+    <p>
+    You are my peace.<br>
+    My happiness.<br>
+    My biggest blessing.
+    </p>
+
+    <p>
+    I don’t know what the future holds…
+    But I know one thing for sure —
+    <strong>I want you in it.</strong>
+    </p>
+
+    <p>
+    Happy Birthday to the girl who made my life brighter,
+    calmer, and meaningful.
+    </p>
+
+    <p style="text-align:center; margin-top:30px;">
+        <strong>
+        I love you more than yesterday…<br>
+        But less than tomorrow 💙
+        </strong>
+    </p>
+    <div style="text-align:center; margin-top:40px;">
+    <button id="surpriseBtn" class="surprise-btn">
+        One Last Surprise ✨
+    </button>
+</div>
+
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btn = document.getElementById("surpriseBtn");
+    const overlay = document.getElementById("videoOverlay");
+    const video = document.getElementById("finalVideo");
+
+    btn.addEventListener("click", function () {
+        overlay.classList.add("show");
+        video.play();
+    });
+
+});
+</script>
+</body>
+</html>
