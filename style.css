@@ -163,7 +163,7 @@ body {
     color: white;
     scroll-behavior: smooth;
 
-    background: url("images/background.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 body::before {
@@ -796,3 +796,4 @@ body::before {
     border-radius: 20px;
 
 }
+
