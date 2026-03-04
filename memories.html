@@ -321,7 +321,15 @@ is next to you 💙
 
 </div>
 <script>
+function typeText(){
+if(index < text.length){
+document.getElementById("typedText").innerHTML += text.charAt(index);
+index++;
+setTimeout(typeText, 70);
+}
+}
 
+window.onload = typeText;
 
 const music = document.getElementById("bgMusic");
 const videos = document.querySelectorAll("video");
@@ -350,4 +358,5 @@ video.addEventListener("ended", () => {
 
 </body>
 </html>
+
 
