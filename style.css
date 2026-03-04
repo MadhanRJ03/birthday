@@ -12,7 +12,7 @@ body {
     z-index: 9999;
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("images/background.jpeg") center/cover no-repeat;
+        url("background.jpeg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,7 +163,7 @@ body {
     color: white;
     scroll-behavior: smooth;
 
-    background: url("images/background.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 body::before {
@@ -282,7 +282,7 @@ body {
     z-index: 9999;
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("images/background.jpeg") center/cover no-repeat;
+        url("background.jpeg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -433,7 +433,7 @@ body {
     color: white;
     scroll-behavior: smooth;
 
-    background: url("images/background.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 body::before {
@@ -835,7 +835,7 @@ gap:40px;
 body{
 margin:0;
 font-family:Arial;
-background:url("images/background.jpeg") center/cover fixed;
+background:url("background.jpeg") center/cover fixed;
 color:white;
 text-align:center;
 }
@@ -955,3 +955,4 @@ transition:0.3s;
 box-shadow:0 0 35px rgba(0,150,255,1);
 transform:scale(1.03);
 }
+
