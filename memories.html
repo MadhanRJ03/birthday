@@ -122,6 +122,101 @@ transition:0.3s;
 box-shadow:0 0 25px rgba(0,150,255,0.8);
 }
 
+@keyframes goldShine{
+0%{
+background-position:0%;
+}
+100%{
+background-position:200%;
+}
+}
+@keyframes romanticGlow{
+0%{
+text-shadow:
+0 0 5px #c0c0c0,
+0 0 10px #e5e5e5,
+0 0 20px #c0c0c0,
+0 0 40px #ffffff;
+}
+
+100%{
+text-shadow:
+0 0 10px #ffffff,
+0 0 20px #dcdcdc,
+0 0 40px #c0c0c0,
+0 0 70px #ffffff;
+}
+}
+.ending-message{
+margin-top:80px;
+margin-bottom:80px;
+font-size:48px;
+font-weight:bold;
+text-align:center;
+font-family:Georgia, serif;
+
+color:#f5f5f5;
+
+/* pearl glow */
+text-shadow:
+0 0 5px rgba(255,255,255,0.9),
+0 0 15px rgba(200,200,255,0.6),
+0 0 30px rgba(180,180,255,0.4);
+
+letter-spacing:2px;
+line-height:1.3;
+
+/* smooth breathing glow */
+animation: pearlGlow 4s ease-in-out infinite;
+}@keyframes pearlGlow{
+
+0%{
+text-shadow:
+0 0 5px rgba(255,255,255,0.7),
+0 0 10px rgba(200,200,255,0.5),
+0 0 20px rgba(180,180,255,0.3);
+}
+
+50%{
+text-shadow:
+0 0 10px rgba(255,255,255,1),
+0 0 25px rgba(200,200,255,0.8),
+0 0 40px rgba(180,180,255,0.6);
+}
+
+100%{
+text-shadow:
+0 0 5px rgba(255,255,255,0.7),
+0 0 10px rgba(200,200,255,0.5),
+0 0 20px rgba(180,180,255,0.3);
+}
+
+}
+@keyframes floatText{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+@keyframes heartGlow{
+
+0%{
+filter:drop-shadow(0 0 2px #5fb3ff);
+}
+
+100%{
+filter:drop-shadow(0 0 12px #5fb3ff);
+}
+
 </style>
 
 </head>
@@ -134,7 +229,7 @@ box-shadow:0 0 25px rgba(0,150,255,0.8);
 
 
 
-<h2>Our Photo Memories 💙</h2>
+<h2>Our  Memories 💙</h2>
 
 <div class="rope"></div>
 
@@ -180,8 +275,6 @@ box-shadow:0 0 25px rgba(0,150,255,0.8);
 </div><div class="memory-card">
 <img src="mem11.jpeg">
 </div><div class="memory-card">
-<img src="mem12.jpeg">
-</div><div class="memory-card">
 <img src="mem13.jpeg">
 </div>
 <div class="memory-card">
@@ -222,6 +315,10 @@ box-shadow:0 0 25px rgba(0,150,255,0.8);
 </video>
 </div>
 
+<div class="ending-message">
+My favorite place in the world <br>
+is next to you 💙
+
 </div>
 <script>
 
@@ -253,3 +350,4 @@ video.addEventListener("ended", () => {
 
 </body>
 </html>
+
