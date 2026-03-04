@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories 💙</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:url("images/background.jpeg") center/cover fixed;
+color:white;
+text-align:center;
+padding-top:60px;
+}
+
+h2{
+margin-top:50px;
+font-size:32px;
+}
+
+/* Rope */
+
+.rope{
+width:80%;
+height:4px;
+background:#8b5a2b;
+margin:40px auto;
+border-radius:5px;
+}
+
+/* Row */
+
+.memory-row{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:60px;
+}
+
+/* Memory Card */
+
+.memory-card{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+position:relative;
+}
+
+/* Images */
+
+.memory-card img{
+width:200px;
+height:260px;
+object-fit:cover;
+border-radius:6px;
+}
+
+/* Videos */
+
+.memory-card video{
+width:260px;
+border-radius:6px;
+}
+
+/* Pin */
+
+.memory-card::before{
+content:"📌";
+position:absolute;
+top:-15px;
+left:50%;
+transform:translateX(-50%);
+font-size:22px;
+}
+
+/* Slight tilt */
+
+.memory-card:nth-child(odd){
+transform:rotate(-3deg);
+}
+
+.memory-card:nth-child(even){
+transform:rotate(3deg);
+}
+.memory-card{
+    animation: swing 6s ease-in-out infinite alternate;
+}
+
+@keyframes swing{
+    0%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(2deg);
+    }
+}
+.memory-card img{
+width:100%;
+border-radius:12px;
+transition:all 0.4s ease;
+animation:photoGlow 4s ease-in-out infinite;
+}
+
+@keyframes photoGlow{
+0%{box-shadow:0 0 10px rgba(0,150,255,0.3);}
+50%{box-shadow:0 0 25px rgba(0,150,255,0.8);}
+100%{box-shadow:0 0 10px rgba(0,150,255,0.3);}
+}
+
+</style>
+
+</head>
+
+
+<body>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/spl.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<h2>Our Photo Memories 💙</h2>
+
+<div class="rope"></div>
+
+<div class="memory-row">
+
+<div class="memory-card">
+<img src="images/mem1.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem2.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem3.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem4.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem5.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem6.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem7.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem8.jpeg">
+</div>
+
+<div class="memory-card">
+<img src="images/mem9.jpg">
+</div>
+<div class="memory-card">
+<img src="images/mem10.jpeg">
+</div><div class="memory-card">
+<img src="images/mem11.jpeg">
+</div><div class="memory-card">
+<img src="images/mem12.jpeg">
+</div><div class="memory-card">
+<img src="images/mem13.jpeg">
+</div>
+<div class="memory-card">
+<img src="images/mem14.jpeg">
+</div>
+
+
+<div class="rope"></div>
+
+<div class="memory-row">
+
+<div class="memory-card">
+<video controls>
+<source src="videos/propose.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="memory-card">
+<video controls>
+<source src="videos/special.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="memory-card">
+<video controls>
+<source src="videos/spl1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="memory-card">
+<video controls>
+<source src="videos/spl2.mp4" type="video/mp4">
+</video>
+</div>
+<video controls>
+<source src="videos/spl3.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+<script>
+
+
+const music = document.getElementById("bgMusic");
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+
+video.addEventListener("play", () => {
+    music.pause();
+});
+
+video.addEventListener("pause", () => {
+    music.play();
+});
+
+video.addEventListener("ended", () => {
+    music.play();
+});
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>
